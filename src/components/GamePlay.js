@@ -35,7 +35,7 @@ const GamePlay = () => {
   return (
     <>
       <Scoreboard score={score} highScore={highScore} />
-      <GameBoard handleGame={handleGame} />
+      <GameBoard handleGame={handleGame} score={score} highScore={highScore} />
     </>
   )
 }

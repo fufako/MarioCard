@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Card from "./Card"
 import Mario from "../images/Mario.png"
 import BabyLuigi from "../images/BabyLuigi.png"
@@ -17,7 +17,7 @@ import Wario from "../images/Wario.png"
 import Yoshi from "../images/Yoshi.png"
 
 const GameBoard = (props) => {
-  const { handleGame } = props
+  const { handleGame, score, highScore } = props
   const images = [
     {
       src: Mario,
@@ -96,6 +96,19 @@ const GameBoard = (props) => {
     },
   ]
   const [cards, setNewCards] = useState(images)
+  const shuffle = (newCards) => {
+    for (let i = newCards.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1))
+      let temp = newCards[i]
+      newCards[i] = newCards[j]
+      newCards[j] = temp
+    }
+  }
+  useEffect(() => {
+    const newCards = [...cards]
+    shuffle(newCards)
+    setNewCards(newCards)
+  }, [score, highScore])
   return (
     <div className="game-board">
       <div className="container">
