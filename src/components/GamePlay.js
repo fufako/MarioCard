@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import GameBoard from "./GameBoard"
-import Header from "./Header"
 import Scoreboard from "./Scoreboard"
 
 const GamePlay = () => {
@@ -34,7 +33,7 @@ const GamePlay = () => {
   return (
     <>
       <Scoreboard score={score} highScore={highScore} />
-      <GameBoard />
+      <GameBoard handleGame={handleGame} />
     </>
   )
 }
