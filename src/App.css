@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@font-face {
+  font-family: "Arvlow";
+  src: local("Arvlow"), url("./fonts/Arvlow.otf") format("truetype");
+  font-weight: bold;
+}
 
 body {
-  font-family: "Bangers";
+  font-family: "Arvlow";
   height: 100%;
   margin: 0;
   background-image: url("./images/bg.jpg");
@@ -37,6 +42,12 @@ body {
   min-width: 140px;
   text-align: center;
   box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.current:hover,
+.best:hover {
+  transform: scale(1.05);
 }
 .game-board {
   margin-top: 20px;
@@ -51,10 +62,20 @@ body {
   gap: 10px;
 }
 .card {
-  background-color: #e70112;
+  width: 200px;
+  background-color: #e70110c6;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
+  box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.title {
+  color: #fefefe;
 }
