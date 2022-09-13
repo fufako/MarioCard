@@ -22,70 +22,92 @@ const GameBoard = (props) => {
     {
       src: Mario,
       name: "Mario",
+      key: 1,
     },
     {
       src: BabyLuigi,
       name: "Baby Luigi",
+      key: 2,
     },
     {
       src: BabyMario,
       name: "Baby Mario",
+      key: 3,
     },
     {
       src: Bowser,
       name: "Bowser",
+      key: 4,
     },
     {
       src: Daisy,
       name: "Daisy",
+      key: 5,
     },
     {
       src: DKong,
       name: "Donkey Kong",
+      key: 6,
     },
     {
       src: Koopa,
       name: "Koopa",
+      key: 7,
     },
     {
       src: Luigi,
       name: "Luigi",
+      key: 8,
     },
     {
       src: Peach,
       name: "Peach",
+      key: 9,
     },
     {
       src: ShyGuy,
       name: "Shy Guy",
+      key: 10,
     },
     {
       src: Toad,
       name: "Toad",
+      key: 11,
     },
     {
       src: Toadette,
       name: "Toadette",
+      key: 12,
     },
     {
       src: Waluigi,
       name: "Waluigi",
+      key: 13,
     },
     {
       src: Wario,
       name: "Wario",
+      key: 14,
     },
     {
       src: Yoshi,
       name: "Yoshi",
+      key: 15,
     },
   ]
   const [cards, setNewCards] = useState(images)
   return (
     <div className="game-board">
-      {cards.map((card) => (
-        <Card src={card.src} name={card.name} handleGameLogic={handleGame} />
-      ))}
+      <div className="container">
+        {cards.map((card) => (
+          <Card
+            src={card.src}
+            name={card.name}
+            key={card.key}
+            handleGameLogic={handleGame}
+          />
+        ))}
+      </div>
     </div>
   )
 }
