@@ -11,7 +11,9 @@ const GamePlay = () => {
     setScore((prevScore) => prevScore + 1)
   }
   const handleHighScore = () => {
-    setHighScore(score)
+    if (highScore < score) {
+      setHighScore(score)
+    }
   }
   const handleCard = (cardName) => {
     addCard((prevCards) => [...prevCards, cardName])

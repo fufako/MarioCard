@@ -104,7 +104,7 @@ const GameBoard = (props) => {
             src={card.src}
             name={card.name}
             key={card.key}
-            handleGameLogic={handleGame}
+            handleGame={handleGame}
           />
         ))}
       </div>
