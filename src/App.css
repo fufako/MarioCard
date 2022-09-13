@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+body {
+  font-family: "Bangers";
+  height: 100%;
+  margin: 0;
+}
+
+.header {
+  margin: 0;
+  background-color: #e70112;
+  box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
+  border-bottom: #fcd000 solid 5px;
+  z-index: 0;
+  text-align: center;
+  padding: 20px;
+}
+.scoreboard {
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 40px;
+}
+.best {
+  background-color: #fcd000;
+}
+.current {
+  background-color: #009ddb;
+}
+.current,
+.best {
+  padding: 10px;
+  border-radius: 30px;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
+}
