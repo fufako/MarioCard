@@ -1,4 +1,4 @@
-# MarioCart
+# MarioCard
 Web app created using React. <br/>
 The purpose of this game is to get points by clicking on an image but don't click on any more than once
 
