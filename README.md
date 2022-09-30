@@ -11,7 +11,7 @@ The purpose of this game is to get points by clicking on an image but don't clic
 
 ## Live app
 
-<a href = "https://fufako.github.io/react-memory-app/"/> Here </a>
+<a href = "https://fufako.github.io/MarioCard/"/> Here </a>
 
 ## Preview
 
